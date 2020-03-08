@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+//import app from 'firebase/app';
+import firebase from './config/firebase';
+import 'firebase/firestore';
 
 function App() {
+
+  useEffect(()=>{
+
+    const db = firebase.firestore();
+    db.collection('test').add({a: 'b'});  
+
+  });
+
+
   return (
     <div className="App">
       <header className="App-header">
