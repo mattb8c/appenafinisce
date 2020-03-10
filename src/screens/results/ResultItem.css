@@ -1,0 +1,19 @@
+
+.ResultItem {
+  list-style: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #979797;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ResultItem p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.ResultItem b{
+  font-size: 16px;
+}

@@ -1,0 +1,21 @@
+
+.InputText{
+  display: 'flex';
+  flex-direction: column;
+}
+
+.InputText p{
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.InputText input{
+  border: 1px solid black;
+  line-height: 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box; 
+}

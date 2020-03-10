@@ -1,0 +1,28 @@
+
+.Business {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.Business .businessDataWrapper {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.Business .data{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.Business .callToAction {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.Business .InputText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
