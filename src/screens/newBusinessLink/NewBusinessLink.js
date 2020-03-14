@@ -1,33 +1,22 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './NewBusinessLink.css';
-import Button from '../../components/Button';
 import Header from '../../components/Header';
-import useLoader from '../../utils/useLoader';
-import { useHistory, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import firebase from '../../config/firebase';
 import 'firebase/functions';
 
-import {
-  FacebookIcon,
-  FacebookShareButton,
-  TelegramIcon,
-  TelegramShareButton,
-  TwitterIcon,
-  TwitterShareButton,
-  WhatsappIcon,
-  WhatsappShareButton,
-} from "react-share";
+import { FacebookShareButton } from "react-share";
 
 
 function NewBusinessLink() {
 
 
-  useEffect(() => {
+  /*useEffect(() => {
 
     firebase.functions().useFunctionsEmulator('https://6f443dce.ngrok.io');
     console.log('useFunctionsEmulator');
 
-  }, []);
+  }, []);*/
 
   const location = useLocation();
   const businessId = location.state ? location.state.businessId : null;

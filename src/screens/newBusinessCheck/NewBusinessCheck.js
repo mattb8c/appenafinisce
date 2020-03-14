@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import './NewBusinessCheck.css';
 import Button from '../../components/Button';
 import Header from '../../components/Header';
@@ -11,15 +11,7 @@ import 'firebase/functions';
 function NewBusinessCheck() {
 
 
-  useEffect(() => {
-
-    firebase.functions().useFunctionsEmulator('https://6f443dce.ngrok.io');
-    console.log('useFunctionsEmulator');
-
-  }, []);
-
-
-  const { loader, setLoading } = useLoader(false);
+  const { loader, setLoading } = useLoader(true);
 
   const location = useLocation();
   const business = location.state ? location.state.business : null;
