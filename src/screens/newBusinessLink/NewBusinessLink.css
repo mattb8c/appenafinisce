@@ -1,0 +1,66 @@
+.NewBusinessLink {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px 10px 25px;
+  background-color: white;
+}
+
+@media screen and (min-width: 400px) {
+
+  .NewBusinessLink{
+      max-width: 400px;
+      margin-top: 90px;
+      margin-left: 100px;
+      border-radius: 10px 10px 0px 0px;
+  }
+
+}
+
+.NewBusinessLink .contentWrapper {
+  flex: 1;
+}
+
+.NewBusinessLink .linkWrapper {
+  margin-bottom: 20px;
+  background-color: rgb(235, 231, 231);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.NewBusinessLink .link {
+  word-break: break-all;
+  margin: 0px;
+}
+
+.NewBusinessLink .message{
+  color: #008755;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.NewBusinessLink .shareButton{
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  flex:1;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  user-select: none;
+  -webkit-user-drag: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color:transparent;
+  border: 1px solid #B92636;
+  background-color: #B92636;
+  color: white;
+}
+
+.NewBusinessLink .shareButton:active {
+  opacity: 80%;
+}
+

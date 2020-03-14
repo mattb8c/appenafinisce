@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import './Intro.css';
-import texts from '../../config/texts';
-import InputText from '../../components/InputText';
 import Button from '../../components/Button';
 
-import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 
@@ -12,46 +9,87 @@ import { useHistory } from "react-router-dom";
 function Intro() {
 
 
-  const [input, setInput] = useState('');
+  const [moreVisible, setMoreVisible] = useState(false);
+
   const history = useHistory();
 
 
-  function search() {
-
-    const clearedInput = input.replace(/\s/g, '').toLowerCase();
+  function openNewBusiness() {
 
     history.push({
-      pathname: '/results/',
-      state: { input: clearedInput }
+      pathname: '/newBusiness/',
     });
 
-  }//search
+  }//openNewBusiness
+
+
+  function share() {
+
+
+  }//share
+
+
+  function showMore() {
+
+    setMoreVisible(!moreVisible);
+
+  }//showMore
+
+
+  function renderMore() {
+
+    if (moreVisible === false) {
+      return null;
+    }
+
+    return <div>
+
+      <p>• ogni attività commerciale può creare una propria pagina che permetterà a chiunque di prenotare un bene o un servizio nel prossimo fututo, <b>pagando ora una caparra</b>.</p>
+
+      <p>• La caparra si paga <b>tramite bonifico, senza intermediari</b>, direttamente sul conto dell’attività commerciale.</p>
+
+      <p>• al termine dell’emergenza, ci si accorderà per <b>data e ora</b> della prenotazione.</p>
+
+    </div>;
+
+  }//renderMore
 
 
   return (
+
     <div className="Intro">
 
-      <h3>{texts['intro_1']}</h3>
+      <div className="contentWrapper">
 
-      <h3>{texts['intro_2']}</h3>
+        <h1>#appenafinisce</h1>
 
-      <div className='ContentWrapper'>
+        <p>Questo progetto nasce per due motivi: </p>
 
-        <InputText
-          label="Cerca la tua attività preferita"
-          value={input}
-          setValue={setInput}
-          onEnter={search} />
+        <p>• per <b>sostenere le attività commerciali</b> che sono costrette a chiudere per l’emergenza covid19.</p>
 
-        <Button 
-          label="Cerca"
-          onClick={search} />
+        <p>• per <b>guardare insieme al futuro</b> e affermare che torneremo ad affollare i nostri luoghi e negozi preferiti.</p>
+
+        <p className="more" onClick={showMore}>Come funziona?</p>
+
+        {renderMore()}
 
       </div>
 
-      <Link className="Link" to="/newBusiness">Aggiungi la tua attività</Link>
+      <div className="buttonWrapper">
+
+        <Button
+          label="Aggiungi la tua attività"
+          onClick={openNewBusiness} />
+
+        <Button
+          label="Condividi"
+          onClick={share}
+          light={true} />
+
+      </div>
 
     </div>
+
   );
 
 }//Intro

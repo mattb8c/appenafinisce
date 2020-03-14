@@ -1,5 +1,4 @@
-
-.NewBusiness {
+.NewBusinessCheck {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -9,7 +8,7 @@
 
 @media screen and (min-width: 400px) {
 
-  .NewBusiness{
+  .NewBusinessCheck{
       max-width: 400px;
       margin-top: 90px;
       margin-left: 100px;
@@ -18,16 +17,27 @@
 
 }
 
-.NewBusiness .intro {
+.NewBusinessCheck .contentWrapper {
+  flex: 1;
+}
+
+
+.NewBusinessCheck .intro {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.NewBusiness .dataWrapper {
+.NewBusinessCheck .dataWrapper {
   margin-bottom: 20px;
+  background-color: rgb(235, 231, 231);
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.NewBusiness .InputText {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.NewBusinessCheck .dataWrapper p {
+  margin: 0px;
+}
+
+.NewBusinessCheck .dataWrapper .info {
+  margin-bottom: 10px;
 }

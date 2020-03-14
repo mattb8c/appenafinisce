@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Button.css';
 
 
 
-function Button({ label, onClick }) {
+function Button({ label, onClick, light }) {
+
+  const className = light ? 'Button light' : 'Button normal';
 
   return (
-    <button className="Button" onClick={onClick} >
+    <button className={className} onClick={onClick} >
       {label}
     </button>
   );

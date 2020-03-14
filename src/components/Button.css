@@ -1,9 +1,7 @@
 
 .Button{
-  background-color: lightgray;
-  border-radius: 5px;
+  border-radius: 20px;
   outline: none;
-  border: 1px solid gray;
   cursor: pointer;
   width: 100%;
   height: 40px;
@@ -12,6 +10,28 @@
   -webkit-user-drag: none;
   padding-left: 10px;
   padding-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.Button.normal{
+  border: 1px solid #B92636;
+  background-color: #B92636;
+  color: white;
+}
+
+.Button.normal:active {
+  opacity: 80%;
+}
+
+.Button.light{
+  color: #B92636;
+  border: 1px solid #B92636;
+  background-color: white;
+}
+
+.Button.light:active {
+  background-color: rgb(250, 196, 203);
 }

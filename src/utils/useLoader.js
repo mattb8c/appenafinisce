@@ -23,6 +23,6 @@ export default function useLoader(initialLoading) {
     </div>;
   }
 
-  return [loader, loading, setLoading];
+  return {loader, loading, setLoading};
 
 }//useLoader

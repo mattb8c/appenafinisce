@@ -1,7 +1,7 @@
 import React from 'react';
 import './InputText.css';
 
-function InputText({ label, value, setValue, onEnter, type = 'text', placeholder = '' }) {
+function InputText({ inputRef, label, value, maxLength, setValue, onEnter, type = 'text', placeholder = '', error = null }) {
 
 
   function onChange(event) {
@@ -23,17 +23,33 @@ function InputText({ label, value, setValue, onEnter, type = 'text', placeholder
   }//onKeyDown
 
 
+  function renderError() {
+
+    if (error === null){
+      return null;
+    }
+
+    return <p className="error">{error}</p>;
+
+  }//renderError
+
+
   return (
     <div className="InputText" >
 
-      <p>{label}</p>
+      <p className="label"><b>{label}</b></p>
 
       <input
+        ref={inputRef}
+        className={error != null ? 'errorInput' : ''}
         type={type}
         value={value}
         onChange={onChange}
         onKeyDown={onKeyDown}
-        placeholder={placeholder} />
+        placeholder={placeholder}
+        maxLength={maxLength} />
+
+      {renderError()}
 
     </div>
   );

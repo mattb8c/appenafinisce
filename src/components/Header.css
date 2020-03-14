@@ -1,0 +1,23 @@
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.Header img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.Header img:active{
+  opacity: 50%;
+}
+
+.Header h1 {
+  margin: 0px;
+}

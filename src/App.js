@@ -6,6 +6,8 @@ import Business from './screens/business/Business';
 import Code from './screens/code/Code';
 import Thanks from './screens/thanks/Thanks';
 import NewBusiness from './screens/newBusiness/NewBusiness';
+import NewBusinessCheck from './screens/newBusinessCheck/NewBusinessCheck';
+import NewBusinessLink from './screens/newBusinessLink/NewBusinessLink';
 
 import {
   BrowserRouter as Router,
@@ -17,7 +19,6 @@ import {
 function App() {
 
   return (
-    <div className="container">
       <Router>
         <Switch>
 
@@ -45,9 +46,16 @@ function App() {
             <NewBusiness />
           </Route>
 
+          <Route exact path="/newBusinessCheck/">
+            <NewBusinessCheck />
+          </Route>
+
+          <Route exact path="/newBusinessLink/">
+            <NewBusinessLink />
+          </Route>
+
         </Switch>
       </Router>
-    </div>
   );
 
 }//App

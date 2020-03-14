@@ -15,7 +15,7 @@ function Business() {
   const history = useHistory();
   const location = useLocation();
 
-  const [loader, loading, setLoading] = useLoader(true);
+  const {loader, loading, setLoading} = useLoader(true);
 
   const [business, setBusiness] = useState();
   const [name, setName] = useState();
