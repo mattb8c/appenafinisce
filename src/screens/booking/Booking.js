@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Booking.css';
 import Button from '../../components/Button';
 import Header from '../../components/Header';
@@ -11,21 +11,13 @@ import 'firebase/functions';
 
 function Booking() {
 
-
+  
   const location = useLocation();
   const business = location.state ? location.state.business : null;
   const booking = location.state ? location.state.booking : null;
   const history = useHistory();
 
   const { loader, setLoading } = useLoader(false);
-
-
-  useEffect(() => {
-
-    firebase.functions().useFunctionsEmulator('https://6f443dce.ngrok.io');
-    console.log('useFunctionsEmulator');
-
-  }, []);
 
 
   async function confirmPayment() {
