@@ -14,7 +14,7 @@ function Intro() {
   const history = useHistory();
 
   const shareLink = "https://appenafinisce.org";
-  const shareMessage = "Ho appena prenotato in uno dei posti in cui non vedo l'ora di tornare. Quando ci andrò? #appenafinisce \n Condividi il progetto con chi ha un'attività chiusa in questo momento di emergenza, sosteniamo l'economia e proiettiamoci al futuro!";
+  const shareMessage = "Condividi questo progetto con chi ha un'attività chiusa in questo momento di emergenza, sosteniamo l'economia e proiettiamoci al futuro!";
 
 
   function openNewBusiness() {

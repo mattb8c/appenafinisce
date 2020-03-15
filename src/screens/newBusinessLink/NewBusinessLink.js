@@ -3,6 +3,7 @@ import './NewBusinessLink.css';
 import Header from '../../components/Header';
 import { useLocation } from "react-router-dom";
 import ShareButton from '../../components/ShareButton';
+import CopyableText from '../../components/CopyableText';
 
 
 function NewBusinessLink() {
@@ -27,11 +28,7 @@ function NewBusinessLink() {
 
       <div className="contentWrapper">
 
-        <div className="linkWrapper">
-
-          <p className="link"><b>{link}</b></p>
-
-        </div>
+        <CopyableText label={link} />
 
         <p><b>Condividilo</b> sui tuoi canali social, ti suggeriamo di aggiungere anche questo <b>messaggio</b>:</p>
 

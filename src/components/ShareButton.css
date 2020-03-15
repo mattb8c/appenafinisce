@@ -1,6 +1,10 @@
 
 .react-share__ShareButton{
   width: 100%;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color:transparent;
+  user-select: none;
+  outline: none;
 }
 
 .ShareButton{
@@ -11,7 +15,6 @@
   height: 40px;
   font-size: 18px;
   user-select: none;
-  -webkit-user-drag: none;
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 7px;
@@ -20,7 +23,9 @@
   overflow: hidden;
   box-sizing: border-box; 
   line-height: 38px;
+  -webkit-user-drag: none;
   -webkit-tap-highlight-color:transparent;
+  user-select: none;
 }
 
 .ShareButton.normal{
