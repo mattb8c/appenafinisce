@@ -20,12 +20,12 @@ import {
 
 function App() {
 
-  useEffect(() => {
+  /*useEffect(() => {
 
     firebase.functions().useFunctionsEmulator('https://6f443dce.ngrok.io');
     console.log('useFunctionsEmulator');
 
-  }, []);
+  }, []);*/
 
   return (
     <Router>
