@@ -2,8 +2,7 @@ import React from 'react';
 import './NewBusinessLink.css';
 import Header from '../../components/Header';
 import { useLocation } from "react-router-dom";
-
-import { FacebookShareButton } from "react-share";
+import ShareButton from '../../components/ShareButton';
 
 
 function NewBusinessLink() {
@@ -40,9 +39,7 @@ function NewBusinessLink() {
 
       </div>
 
-      <FacebookShareButton url={link} quote={message} hashtag="#appenafinisce">
-        <div className="shareButton">Condividi</div>
-      </FacebookShareButton>
+      <ShareButton link={link} message={message} />
 
     </div>
 

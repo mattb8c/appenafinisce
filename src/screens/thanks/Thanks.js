@@ -1,10 +1,8 @@
 import React from 'react';
 import './Thanks.css';
-import Button from '../../components/Button';
-
+import ShareButton from '../../components/ShareButton';
 import { useLocation } from "react-router-dom";
 import Header from '../../components/Header';
-
 
 
 function Thanks() {
@@ -13,12 +11,8 @@ function Thanks() {
   const location = useLocation();
   const business = location.state ? location.state.business : null;
 
-
-  function share() {
-
-
-  }//share
-
+  const shareLink = "https://appenafinisce.org";
+  const shareMessage = "Ho appena prenotato in uno dei posti in cui non vedo l'ora di tornare. Quando ci andrò? #appenafinisce \n Condividi il progetto con chi ha un'attività chiusa in questo momento di emergenza, sosteniamo l'economia e proiettiamoci al futuro!";
 
   return (
 
@@ -32,14 +26,7 @@ function Thanks() {
         <p>Insieme ripartiremo <b>#appenafinisce</b>!</p>
       </div>
 
-      <div className="buttonWrapper">
-
-        <Button
-          label="Condividi"
-          onClick={share}
-          light={true} />
-
-      </div>
+      <ShareButton link={shareLink} message={shareMessage} />
 
     </div>
 

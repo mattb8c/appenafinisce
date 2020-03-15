@@ -1,5 +1,9 @@
 
-.Button{
+.react-share__ShareButton{
+  width: 100%;
+}
+
+.ShareButton{
   border-radius: 20px;
   outline: none;
   cursor: pointer;
@@ -14,25 +18,27 @@
   margin-bottom: 7px;
   text-transform: uppercase;
   overflow: hidden;
+  box-sizing: border-box; 
+  line-height: 38px;
   -webkit-tap-highlight-color:transparent;
 }
 
-.Button.normal{
+.ShareButton.normal{
   border: 1px solid #B92636;
   background-color: #B92636;
   color: white;
 }
 
-.Button.normal:active {
+.ShareButton.normal:active {
   opacity: 80%;
 }
 
-.Button.light{
+.ShareButton.light{
   color: #B92636;
   border: 1px solid #B92636;
   background-color: white;
 }
 
-.Button.light:active {
+.ShareButton.light:active {
   background-color: rgb(250, 196, 203);
 }

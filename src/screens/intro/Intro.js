@@ -4,6 +4,7 @@ import Button from '../../components/Button';
 
 import { useHistory } from "react-router-dom";
 import ProjectInfo from '../../components/ProjectInfo';
+import ShareButton from '../../components/ShareButton';
 
 
 
@@ -11,6 +12,9 @@ function Intro() {
 
 
   const history = useHistory();
+
+  const shareLink = "https://appenafinisce.org";
+  const shareMessage = "Ho appena prenotato in uno dei posti in cui non vedo l'ora di tornare. Quando ci andrò? #appenafinisce \n Condividi il progetto con chi ha un'attività chiusa in questo momento di emergenza, sosteniamo l'economia e proiettiamoci al futuro!";
 
 
   function openNewBusiness() {
@@ -20,12 +24,6 @@ function Intro() {
     });
 
   }//openNewBusiness
-
-
-  function share() {
-
-
-  }//share
 
 
   return (
@@ -40,10 +38,7 @@ function Intro() {
           label="Aggiungi la tua attività"
           onClick={openNewBusiness} />
 
-        <Button
-          label="Condividi"
-          onClick={share}
-          light={true} />
+        <ShareButton link={shareLink} message={shareMessage} />
 
       </div>
 
