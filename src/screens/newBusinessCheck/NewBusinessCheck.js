@@ -11,7 +11,7 @@ import 'firebase/functions';
 function NewBusinessCheck() {
 
 
-  const { loader, setLoading } = useLoader(true);
+  const { loader, setLoading } = useLoader(false);
 
   const location = useLocation();
   const business = location.state ? location.state.business : null;

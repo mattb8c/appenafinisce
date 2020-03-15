@@ -1,26 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import './Business.css';
-import texts from '../../config/texts';
-import InputText from '../../components/InputText';
 import Button from '../../components/Button';
 import firebase from '../../config/firebase';
 import 'firebase/firestore';
-import { useParams, useHistory, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useLoader from '../../utils/useLoader';
+import ProjectInfo from '../../components/ProjectInfo';
+import { useHistory } from "react-router-dom";
 
 
 function Business() {
 
+
   const { id } = useParams();
   const history = useHistory();
-  const location = useLocation();
 
-  const {loader, loading, setLoading} = useLoader(true);
+  const { loader, loading, setLoading } = useLoader(true);
 
   const [business, setBusiness] = useState();
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [phone, setPhone] = useState();
 
 
   //id
@@ -29,9 +26,9 @@ function Business() {
     async function loadData(id) {
 
       const db = firebase.firestore();
-      const snapshot = await db.collection('business').doc(id).get();
+      const snapshot = await db.collection('businesses').doc(id).get();
       const businessData = snapshot.data();
-      if(businessData){
+      if (businessData) {
         businessData.id = snapshot.id;
       }
 
@@ -40,98 +37,81 @@ function Business() {
 
     }//loadData
 
-    loadData(id);
+    if (id) {
+      loadData(id);
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
 
-  //state
-  useEffect(() => {
-
-    if (location.state) {
-      setBusiness(location.state.businessData);
-      setLoading(false);
-    }
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.state]);
-
-
-
-  async function openCode() {
-
-    const db = firebase.firestore();
-    const docRef = await db.collection('business').doc(business.id).collection('bookings').add({
-      businessId: business.id,
-      name,
-      email,
-      phone
-    });
-
-    const bookingId = docRef.id;
+  function startBooking() {
 
     history.push({
-      pathname: '/code/',
-      state: { business, bookingId }
+      pathname: '/customerData/',
+      state: { business },
     });
 
-  }//openCode
+  }//startBooking
 
-  
+
+  function renderBusinessNotFound() {
+
+    if (loading === false && business == null) {
+      return <p className="notFound">Il link non è corretto</p>
+    }
+
+  }//renderBusinessNotFound
+
+
   function renderBusinessData() {
 
-    return <div className="businessDataWrapper">
+    if (loading || !business) {
+      return null;
+    }
 
-      <h1>{business.name}</h1>
+    return <div className="businessActionWrapper">
 
-      <p className="data" >{business.address + ' - ' + business.city + ' (' + business.province + ') - ' + business.zipCode}</p>
-      <p className="data">{business.phone}</p>
+      <div className="businessDataWrapper">
+        <h1 className="name">{business.name}</h1>
+        <p>{business.address + ' - ' + business.city + ' (' + business.province.toUpperCase() + ')'}</p>
+        <p></p>
+        <p>{business.phone}</p>
+      </div>
+
+      <Button
+        label="Prenota"
+        onClick={startBooking} />
 
     </div>;
 
   }//renderBusinessData
-  
 
-  if (loading) {
-    return loader;
-  }
 
-  if(business == null){
-    return <p>Non trovato</p>;
-  }
+  function renderInfo() {
+
+    if (loading || !business) {
+      return null;
+    }
+
+    return <ProjectInfo />;
+
+  }//renderInfo
+
 
   return (
+
     <div className="Business">
+
+      {renderBusinessNotFound()}
+
+      <div className="infoWrapper">
+        {renderInfo()}
+      </div>
 
       {renderBusinessData()}
 
-      <div className="dataWrapper">
-
-        <p className="callToAction">{texts['business_call_to_action_1']}</p>
-
-        <InputText
-          label="Nome"
-          value={name}
-          setValue={setName} />
-
-        <InputText
-          type="email"
-          label="Email"
-          value={email}
-          setValue={setEmail} />
-
-        <InputText
-          type="tel"
-          label="Telefono"
-          value={phone}
-          setValue={setPhone} />
-
-      </div>
-
-      <Button
-        label="Prendi il tuo codice prenotazione"
-        onClick={openCode} />
+      {loader}
 
     </div>
   );

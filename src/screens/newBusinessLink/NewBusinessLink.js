@@ -1,22 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './NewBusinessLink.css';
 import Header from '../../components/Header';
 import { useLocation } from "react-router-dom";
-import firebase from '../../config/firebase';
-import 'firebase/functions';
 
 import { FacebookShareButton } from "react-share";
 
 
 function NewBusinessLink() {
-
-
-  /*useEffect(() => {
-
-    firebase.functions().useFunctionsEmulator('https://6f443dce.ngrok.io');
-    console.log('useFunctionsEmulator');
-
-  }, []);*/
 
   const location = useLocation();
   const businessId = location.state ? location.state.businessId : null;

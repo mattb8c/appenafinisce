@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import Intro from './screens/intro/Intro';
-import Results from './screens/results/Results';
 import Business from './screens/business/Business';
-import Code from './screens/code/Code';
+import CustomerData from './screens/customerData/CustomerData';
+import Booking from './screens/booking/Booking';
 import Thanks from './screens/thanks/Thanks';
 import NewBusiness from './screens/newBusiness/NewBusiness';
 import NewBusinessCheck from './screens/newBusinessCheck/NewBusinessCheck';
@@ -26,16 +26,20 @@ function App() {
             <Intro />
           </Route>
 
-          <Route exact path="/results/">
-            <Results />
+          <Route exact path="/b/:id">
+            <Business />
           </Route>
 
           <Route exact path="/business/:id">
             <Business />
           </Route>
 
-          <Route exact path="/code/">
-            <Code />
+          <Route exact path="/customerData/">
+            <CustomerData />
+          </Route>
+
+          <Route exact path="/booking/">
+            <Booking />
           </Route>
 
           <Route exact path="/thanks/">

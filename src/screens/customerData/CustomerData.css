@@ -1,4 +1,4 @@
-.Business {
+.CustomerData {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 
 @media screen and (min-width: 400px) {
 
-  .Business{
+  .CustomerData{
       max-width: 400px;
       margin-top: 90px;
       margin-left: 100px;
@@ -19,33 +19,33 @@
 
 }
 
-.Business .notFound {
+.CustomerData .notFound {
   padding: 20px 25px 20px 25px;
 }
 
-.Business .infoWrapper {
+.CustomerData .customerWrapper {
   padding: 20px 25px 20px 25px;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.Business .businessActionWrapper {
+.CustomerData .businessActionWrapper {
   padding: 20px 25px 20px 25px;
   background-color: #f5f5f5;
   margin-top: 15px;
 }
 
-.Business .businessDataWrapper {
+.CustomerData .businessDataWrapper {
   margin-bottom: 10px;
 }
 
-.Business .businessActionWrapper .name {
+.CustomerData .businessActionWrapper .name {
   margin: 0px;
   color: #27282C;
 }
 
-.Business .businessActionWrapper p {
+.CustomerData .businessActionWrapper p {
   margin: 0px;
   margin-top: 5px;
 }

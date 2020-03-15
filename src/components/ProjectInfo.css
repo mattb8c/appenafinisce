@@ -1,0 +1,16 @@
+
+.ProjectInfo {
+  flex: 1;
+}
+
+.ProjectInfo .more{
+  color: #008755;
+  font-size: 18px;
+  text-decoration: underline;
+  user-select: none;
+  cursor: pointer;
+}
+
+.ProjectInfo .more:active{
+  opacity: 90%;
+}

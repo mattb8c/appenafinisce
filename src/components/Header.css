@@ -12,6 +12,7 @@
   margin-right: 10px;
   cursor: pointer;
   -webkit-tap-highlight-color:transparent;
+  user-select: none;
 }
 
 .Header img:active{

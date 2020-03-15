@@ -13,6 +13,6 @@ function Button({ label, onClick, light }) {
     </button>
   );
 
-}//InputText
+}//Button
 
 export default Button;
