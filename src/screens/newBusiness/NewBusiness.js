@@ -164,7 +164,13 @@ function NewBusiness() {
 
       <Header showBack={true} label="Nuova attività" onBack={back} />
 
-      <p className="intro">Inserisci i tuoi dati e ti arriverà <b>per email il link da condividere con i tuoi clienti</b> per ricevere prenotazioni tramite iban.</p>
+      <p className="intro">
+        Inserisci i tuoi dati. Riceverai un <b>link</b> da condividere con i tuoi clienti per farli partecipare e farli proiettare al futuro insieme a te.
+        <br/><br/>
+        Ti arriverà <b>un'email</b> per ogni prenotazione effettuata con i dati del cliente e il suo <b>codice prenotazione</b>.
+        <br/><br/>
+        Quando l'emergenza sarà finita ti contatteranno per concordare data e ora.
+      </p>
 
       <div className="dataWrapper">
 
