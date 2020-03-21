@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Intro from './screens/intro/Intro';
 import Business from './screens/business/Business';
@@ -15,20 +15,24 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useLocation
 } from "react-router-dom";
 
 
 function App() {
 
-  /*useEffect(() => {
+  useEffect(() => {
 
-    firebase.functions().useFunctionsEmulator('https://6f443dce.ngrok.io');
+    firebase.functions().useFunctionsEmulator('https://08fc984a.ngrok.io');
     console.log('useFunctionsEmulator');
 
-  }, []);*/
+  }, []);
 
   return (
     <Router>
+
+      <ScrollToTop />
+
       <Switch>
 
         <Route exact path="/">
@@ -72,5 +76,18 @@ function App() {
   );
 
 }//App
+
+
+function ScrollToTop() {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+
+}//ScrollToTop
 
 export default App;
