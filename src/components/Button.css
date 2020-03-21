@@ -24,7 +24,7 @@
 }
 
 .Button.normal:active {
-  opacity: 80%;
+  background-color: rgb(233, 130, 142);
 }
 
 .Button.light{
