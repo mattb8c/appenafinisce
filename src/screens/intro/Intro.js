@@ -40,6 +40,8 @@ function Intro() {
 
         <ShareButton link={shareLink} message={shareMessage} />
 
+        <p className="questions">Hai domande? Contattaci su <a target="__BLANK" href="https://www.facebook.com/appenafinisce/">Facebook</a></p>
+
       </div>
 
     </div>

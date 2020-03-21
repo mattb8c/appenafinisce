@@ -174,6 +174,7 @@ function CustomerData() {
         <InputText
           inputRef={emailRef}
           type="email"
+          removeSpaces={true}
           label="Email"
           value={email}
           setValue={setEmail}

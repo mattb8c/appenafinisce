@@ -135,9 +135,9 @@ function NewBusiness() {
       iban,
     };
 
-    history.replace({ 
+    history.replace({
       pathname: '/newBusinessCheck/',
-      state: { business : newBusiness },
+      state: { business: newBusiness },
     });
 
   }//createBusiness
@@ -221,6 +221,7 @@ function NewBusiness() {
         <InputText
           inputRef={emailRef}
           type="email"
+          removeSpaces={true}
           label="Email"
           value={email}
           setValue={setEmail}

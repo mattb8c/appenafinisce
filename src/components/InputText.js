@@ -1,12 +1,17 @@
 import React from 'react';
 import './InputText.css';
 
-function InputText({ inputRef, label, value, maxLength, setValue, onEnter, type = 'text', placeholder = '', error = null }) {
+function InputText({ inputRef, label, value, maxLength, setValue, onEnter, type = 'text', placeholder = '', error = null, removeSpaces=false }) {
 
 
   function onChange(event) {
 
-    const value = event.target.value;
+    let value = event.target.value;
+
+    if(removeSpaces){
+      value = value.replace(/\s/g, '');
+    }
+
     if (setValue) {
       setValue(value);
     }
