@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './ProjectInfo.css';
+import './BusinessProjectInfo.css';
 
 
 
-function ProjectInfo() {
+function BusinessProjectInfo() {
 
 
   const [moreVisible, setMoreVisible] = useState(false);
@@ -37,7 +37,7 @@ function ProjectInfo() {
 
   return (
 
-    <div className="ProjectInfo">
+    <div className="BusinessProjectInfo">
 
         <h1>#appenafinisce</h1>
 
@@ -55,6 +55,6 @@ function ProjectInfo() {
 
   );
 
-}//ProjectInfo
+}//BusinessProjectInfo
 
-export default ProjectInfo;
+export default BusinessProjectInfo;

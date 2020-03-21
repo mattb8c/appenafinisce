@@ -3,7 +3,7 @@ import './Intro.css';
 import Button from '../../components/Button';
 
 import { useHistory } from "react-router-dom";
-import ProjectInfo from '../../components/ProjectInfo';
+import ProjectInfo from './ProjectInfo';
 import ShareButton from '../../components/ShareButton';
 
 

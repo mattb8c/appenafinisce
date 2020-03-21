@@ -5,7 +5,7 @@ import firebase from '../../config/firebase';
 import 'firebase/firestore';
 import { useParams } from "react-router-dom";
 import useLoader from '../../utils/useLoader';
-import ProjectInfo from '../../components/ProjectInfo';
+import ProjectInfo from './BusinessProjectInfo';
 import { useHistory } from "react-router-dom";
 
 

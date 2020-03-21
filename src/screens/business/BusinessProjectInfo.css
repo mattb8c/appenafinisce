@@ -1,0 +1,16 @@
+
+.BusinessProjectInfo {
+  flex: 1;
+}
+
+.BusinessProjectInfo .more{
+  color: #008755;
+  font-size: 18px;
+  text-decoration: underline;
+  user-select: none;
+  cursor: pointer;
+}
+
+.BusinessProjectInfo .more:active{
+  opacity: 90%;
+}
