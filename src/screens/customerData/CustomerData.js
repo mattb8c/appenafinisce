@@ -81,6 +81,7 @@ function CustomerData() {
       email,
       phone,
       deposit,
+      createdAt: firebase.firestore.Timestamp.now(),
     };
 
     try {

@@ -12,7 +12,7 @@ function Thanks() {
   const business = location.state ? location.state.business : null;
 
   const shareLink = "https://appenafinisce.org";
-  const shareMessage = "Ho appena prenotato in uno dei posti in cui non vedo l'ora di tornare. Quando ci andrò? #appenafinisce \n Condividi il progetto con chi ha un'attività chiusa in questo momento di emergenza, sosteniamo l'economia e proiettiamoci al futuro!";
+  const shareMessage = "Ho appena prenotato in una delle mie attività preferite. #appenafinsice è un progetto nato per iniziare a pensare al futuro, per sostenere l'economia e per dimostrare che torneremo alle nostre vite più forti e uniti di prima. Partecipa anche tu: https://www.facebook.com/appenafinisce";
 
   return (
 

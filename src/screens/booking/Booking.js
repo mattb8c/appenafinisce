@@ -77,7 +77,7 @@ function Booking() {
       <CopyableText label={business.iban} />
 
       <p className="fieldLabel">Causale:</p>
-      <CopyableText label={"Codice caparra: " + booking.id} />
+      <CopyableText label={"Codice caparra - " + booking.id} />
 
     </div>;
 

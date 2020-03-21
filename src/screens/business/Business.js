@@ -5,7 +5,7 @@ import firebase from '../../config/firebase';
 import 'firebase/firestore';
 import { useParams } from "react-router-dom";
 import useLoader from '../../utils/useLoader';
-import ProjectInfo from './BusinessProjectInfo';
+import BusinessProjectInfo from './BusinessProjectInfo';
 import { useHistory } from "react-router-dom";
 
 
@@ -94,7 +94,7 @@ function Business() {
       return null;
     }
 
-    return <ProjectInfo />;
+    return <BusinessProjectInfo business={business} />;
 
   }//renderInfo
 

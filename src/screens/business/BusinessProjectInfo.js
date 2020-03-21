@@ -3,53 +3,78 @@ import './BusinessProjectInfo.css';
 
 
 
-function BusinessProjectInfo() {
+function BusinessProjectInfo({ business }) {
 
 
-  const [moreVisible, setMoreVisible] = useState(false);
+  const [howJoinVisible, setHowJoinVisible] = useState(false);
+  const [howWorkVisible, setHowWorkVisible] = useState(false);
 
 
-  function showMore() {
+  function showHowJoin() {
 
-    setMoreVisible(!moreVisible);
+    setHowJoinVisible(!howJoinVisible);
 
-  }//showMore
+  }//showHowJoin
 
 
-  function renderMore() {
+  function showHowWork() {
 
-    if (moreVisible === false) {
+    setHowWorkVisible(!howWorkVisible);
+
+  }//showHowWork
+
+
+  function renderHowJoin() {
+
+    if (howJoinVisible === false) {
       return null;
     }
 
     return <div>
 
-      <p>• Ogni attività commerciale può creare una propria pagina che permetterà a chiunque di prenotare un bene o un servizio nel prossimo fututo, <b>pagando ora una caparra</b>.</p>
+      <p>Iniziamo di nuovo a prenotare le nostre attività preferite!</p>
 
-      <p>• La caparra si paga <b>tramite bonifico, senza intermediari</b>, direttamente sul conto dell’attività commerciale.</p>
-
-      <p>• Al termine dell’emergenza, ci si accorderà per <b>data e ora</b> della prenotazione.</p>
+      <p>Paghiamo ora una caparra, sosteniamo l'economia e cominciamo a pensare al futuro.</p>
 
     </div>;
 
-  }//renderMore
+  }//renderHowJoin
+
+
+  function renderHowWork() {
+
+    if (howWorkVisible === false) {
+      return null;
+    }
+
+    return <div>
+
+      <p>Inserisci i tuoi dati, riceverai le informazioni per effettuare il bonifico e il tuo codice prenotazione. Quando l'emergenza sarà finita contatta la struttura per concordare data e ora.</p>
+
+    </div>;
+
+  }//renderHowWork
 
 
   return (
 
     <div className="BusinessProjectInfo">
 
-        <h1>#appenafinisce</h1>
+      <h1>#appenafinisce</h1>
 
-        <p>Questo progetto nasce per due motivi: </p>
+      <p>{business.name} partecipa al progetto #appenafinise. </p>
 
-        <p>• per <b>sostenere le attività commerciali</b> che sono costrette a chiudere per l’emergenza covid-19.</p>
+      <p>
+        Il progetto nasce dalla voglia di proiettarsi al futuro e di dimostrare che questa emergenza finirà.
+        <br />
+        Vogliamo unirci nell'attesa e nella speranza, dimostrando che torneremo alle nostre vite più forti e uniti di prima.
+      </p>
 
-        <p>• per <b>guardare insieme al futuro</b> e affermare che torneremo ad affollare i nostri luoghi e negozi preferiti.</p>
+      <p className="more" onClick={showHowJoin}>Come funziona?</p>
+      {renderHowJoin()}
 
-        <p className="more" onClick={showMore}>Come funziona?</p>
-
-        {renderMore()}
+      <p className="more" onClick={showHowWork}>Cosa devo fare?</p>
+      {renderHowWork()}
 
     </div>
 

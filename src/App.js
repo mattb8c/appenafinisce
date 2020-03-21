@@ -8,7 +8,7 @@ import Thanks from './screens/thanks/Thanks';
 import NewBusiness from './screens/newBusiness/NewBusiness';
 import NewBusinessCheck from './screens/newBusinessCheck/NewBusinessCheck';
 import NewBusinessLink from './screens/newBusinessLink/NewBusinessLink';
-import firebase from './config/firebase';
+//import firebase from './config/firebase';
 import 'firebase/functions';
 
 import {
@@ -21,12 +21,12 @@ import {
 
 function App() {
 
-  useEffect(() => {
+  /*useEffect(() => {
 
     firebase.functions().useFunctionsEmulator('https://08fc984a.ngrok.io');
     console.log('useFunctionsEmulator');
 
-  }, []);
+  }, []);*/
 
   return (
     <Router>
