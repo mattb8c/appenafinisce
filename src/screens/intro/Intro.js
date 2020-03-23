@@ -27,9 +27,11 @@ function Intro() {
 
 
   return (
-
+	  
+	  
+	  
     <div className="Intro">
-
+	  	
       <ProjectInfo />
 
       <div className="buttonWrapper">
@@ -51,3 +53,4 @@ function Intro() {
 }//Intro
 
 export default Intro;
+

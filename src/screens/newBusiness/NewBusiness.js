@@ -7,6 +7,7 @@ import Header from '../../components/Header';
 import validator from 'validator';
 import ibanValidator from 'iban';
 import { useHistory, useLocation } from "react-router-dom";
+import logo from '../../assets/images/logo.png';
 
 
 function NewBusiness() {
@@ -161,16 +162,19 @@ function NewBusiness() {
   return (
 
     <div className="NewBusiness">
+	   <img src={logo} alt="Logo" class="logo" />
 
       <Header showBack={true} label="Nuova attività" onBack={back} />
 
-      <p className="intro">
+      <div className="intro">
+	  
         Inserisci i tuoi dati. Riceverai un <b>link</b> da condividere con i tuoi clienti per farli partecipare e farli proiettare al futuro insieme a te.
         <br/><br/>
         Ti arriverà <b>un'email</b> per ogni prenotazione effettuata con i dati del cliente e il suo <b>codice prenotazione</b>.
         <br/><br/>
         Quando l'emergenza sarà finita ti contatteranno per concordare data e ora.
-      </p>
+      
+	  </div>
 
       <div className="dataWrapper">
 

@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import './ProjectInfo.css';
+import logo from '../../assets/images/logo.png';
 
 
 
 function ProjectInfo() {
 
 
-  const [howJoinVisible, setHowJoinVisible] = useState(false);
-  const [howWorkVisible, setHowWorkVisible] = useState(false);
+  var [howJoinVisible, setHowJoinVisible] = useState(false);
+  var [howWorkVisible, setHowWorkVisible] = useState(false);
 
 
   function showHowJoin() {
 
     setHowJoinVisible(!howJoinVisible);
-
+ 
   }//showHowJoin
 
 
@@ -30,13 +31,15 @@ function ProjectInfo() {
       return null;
     }
 
-    return <div>
+    return <div className="toolTip">
 
       <p>• Hai un'attività? Aggiungila e condividi il progetto con i tuoi clienti e i tuoi colleghi. Trasmetti i valori del progetto, rendilo possibile!</p>
 
       <p>• Vuoi prenotare un'attività? Condividi con i gestori questo progetto, rendili partecipi e potrai prenotare.</p>
 
     </div>;
+	
+	  
 
   }//renderHowJoin
 
@@ -47,11 +50,12 @@ function ProjectInfo() {
       return null;
     }
 
-    return <div>
+    return <div className="toolTip">
 
       <p>L'attività condivide i propri dati. I clienti effettuano un bonifico direttamente all'attività e ricevono un codice prenotazione che useranno appena sarà finita l'emergenza.</p>
 
     </div>;
+	  
 
   }//renderHowWork
 
@@ -60,9 +64,12 @@ function ProjectInfo() {
 
     <div className="ProjectInfo">
 
-      <h1>#appenafinisce</h1>
-
-      <p>Questo progetto nasce per prenotare ora qualcosa che faremo #appenafinisce. </p>
+      <img src={logo} alt="Logo" class="logo" />
+	  
+	  <h1>#appenafinisce</h1>
+	
+	  <div className="info">
+	  <p>Questo progetto nasce per prenotare ora qualcosa che faremo #appenafinisce. </p>
 
       <p>Non possiamo risolvere tutti i problemi di chi ha un'attività che deve restare chiusa.</p>
       <p>Ma possiamo unirci nell'attesa e nella speranza, dimostrando che torneremo alle nostre vite più forti e uniti di prima.</p>
@@ -72,6 +79,10 @@ function ProjectInfo() {
 
       <p className="more" onClick={showHowWork}>Come funziona?</p>
       {renderHowWork()}
+	  
+
+
+       </div>
 
     </div>
 

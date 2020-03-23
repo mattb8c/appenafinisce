@@ -13,11 +13,13 @@ html, body, #root {
 }
 
 #root{
-  background-image: url("./assets/images/bg.jpg");
+  /*background-image: url("./assets/images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
+	background:linear-gradient( #06ae6f,#0B6946);
+	text-align: center;
 }
 
 h1, h2, h3, p, b, button, input {
@@ -39,4 +41,8 @@ p, b{
 img{
   user-select: none;
   -webkit-user-drag: none;
+}
+.logo{
+	width: 120px;
+    margin-top: -80px;
 }
